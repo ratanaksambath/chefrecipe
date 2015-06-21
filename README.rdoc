@@ -20,3 +20,28 @@ email: string
 -email must be present
 -email must be unique(we will use this for logins later)
 -email must be valid
+
+Chefs:
+
+What we have already:
+-chef mmodel and validations
+-chefs table with columns chefname and email
+
+what we need to do:
+-add passwords to the chefs table so chefs can be authenticated and logged in
+-use email as log in credentials , since email is unique
+-ability to register new chefs to use the app
+-ability to list chefs using the app
+-ability for chefs to log in and log out of the app
+-restrict actions like create recipe , eidt recipe and like featuere to logged in chefs only
+-restrict edit of recips by ches who create the recipes
+
+Authentication updates:
+
+-Show recipe page -> Ability to edit/update only own recipe
+-Navigation partial -> Toggle Menu, restrict new
+-Restrict thubms up and thumbs down action to logged-in user only
+-Recipe - update to current_user
+-Like - update to current_user
+-Before_action :require_user, except: [:show, :index]
+-Before_action :require_sam_user for chefs, only:[:edit, :update]

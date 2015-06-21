@@ -8,6 +8,6 @@ class Chef < ActiveRecord::Base
              uniqueness: {case_sensitive: false},
              format: {with: EMAIL_FORMAT}
 # call back method (before_save) is use to have the object do the scope condition before it saved to the database
-
+  has_secure_password
 
 end
