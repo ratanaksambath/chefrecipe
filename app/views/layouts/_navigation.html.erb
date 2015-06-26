@@ -1,19 +1,15 @@
 <header class = "navbar navbar-fixed-top navbar-default">
   <div class = "container">
-    <%= link_to "superChef",root_path, class: "btn btn-lg btn-success", id: "logo" %>
-    <div class = "nav-item">
-      <%= link_to "Show all Recipe", recipes_path, class: "btn btn-default btn-warning" %>
-    </div>
-    <div class = "nav-item">
-      <%= link_to "link 2", "", class: "btn btn-default btn-warning" %>
-    </div>
+    <%= link_to "superChef",root_path, class: "btn btn-lg btn-link", id: "logo" %>
+
+
     <% if logged_in? %>
       <div class = "nav-item">
         <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %>
       </div>
       <ul class = "nav-item" style= "float: right">
         <li class = "dropdown">
-          <%= link_to '#',class: "btn btn-info dropdown-toggle", "data-toggle" => "dropdown" do %>
+          <%= link_to '#',class: "btn btn-link dropdown-toggle",id: "nav-item-setting", "data-toggle" => "dropdown" do %>
           <%= current_user.chefname %> <b class = "caret"></b>
           <% end %>
           <ul class = "dropdown-menu">
@@ -25,8 +21,8 @@
         </li>
       </ul>
     <% else %>
-      <div class = "nav-item">
-        <%= link_to "Log in", login_path, class: "btn btn-default btn-warning" %>
+      <div class = "nav-item" style = "float: right">
+        <%= link_to "Log in", login_path, class: "btn btn-link", id: "nav-item-setting"  %>
       </div>
     <% end %>
   </div>

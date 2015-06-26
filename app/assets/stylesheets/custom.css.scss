@@ -1,4 +1,4 @@
-$navbar-default-bg: #312312;
+$navbar-default-bg: #ff6d00;
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
@@ -100,6 +100,19 @@ span.picture{
   margin: 10px 10px 10px 10px;
 }
 
-.carousel-image{
-  padding-bottom: 20px;
+.container{
+  width: 1280px;
+  padding-bottom: 2px;
+}
+
+#nav-item-setting {
+
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
 }
